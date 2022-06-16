@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import {shallowReactive, shallowRef, triggerRef} from 'vue';//非递归监听 用法相同
+import { shallowReactive, shallowRef, triggerRef } from 'vue'; // 非递归监听 用法相同
 
 /**
  * 1.reactive

@@ -44,7 +44,7 @@ export default {
         function myFn(){
             // obj.name = 'zzz';
             // console.log(obj);
-             obj2.name = 'zzz';
+            obj2.name = 'zzz';
             console.log(obj2);
             // state.name = 'zzz';
             console.log(state);

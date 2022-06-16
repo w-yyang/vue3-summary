@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {reactive, ref, isRef, isReactive} from 'vue';
+import { reactive, ref, isRef, isReactive } from 'vue';
 /**
  * 1.ref
  *      和reactive一样，也是用来实现响应式数据的方法

@@ -32,8 +32,13 @@ export const routeList: IRouteList[] = [
   },
   {
     title: '父子provide/inject通信',
-    name: 'ProvideInject',
-    path: '/use/provide-inject'
+    name: 'Provide',
+    path: '/use/provide'
+  },
+  {
+    title: '父子provide/inject通信',
+    name: 'Inject',
+    path: '/use/inject'
   },
   {
     title: '父子props通信',
