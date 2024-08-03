@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ name.name }}</p>
+    <p>{{ parentData.name }}</p>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { computed, defineComponent, inject } from 'vue'
 
 export default defineComponent({
   setup() {
-    const name = inject<{name: string} | undefined>("name");
+    const name = inject("name", '1111');
     console.log(name?.name);
     const parentData = computed(() => name);
 

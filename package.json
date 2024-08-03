@@ -1,6 +1,7 @@
 {
   "name": "vue3-summary",
   "version": "0.0.0",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"

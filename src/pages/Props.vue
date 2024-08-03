@@ -6,8 +6,11 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  setup() {
-
+  props: {
+    title: String
+  },
+  setup(props) {
+    const { title = '' } = props;
   }
 });
 </script>
