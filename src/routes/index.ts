@@ -1,18 +1,34 @@
 import { defineAsyncComponent } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 import Home from '../pages/Home.vue';
-import { routeList } from './routelist';
+import { IRouteList, routeList } from './routelist';
 
-const componentImport = (path: string) => () => import(`../pages/${path}.vue`);
+/* @vite-ignore */
+const componentImport = (path: string, parentDir?: string) => () => import(parentDir ? `../pages/components/${parentDir}/${path}.vue` : `../pages/${path}.vue`);
 
 const routeListArr = routeList.map((val) => {
-  return {
-    path: val.path,
-    name: val.name,
-    component: componentImport(val.name)
+  const importRouteComp = (valItem: IRouteList, parentDir?: string): RouteRecordRaw[] => {
+    let valRouter;
+    if (!valItem.children) {
+      valRouter = {
+        ...valItem,
+        // @ts-ignore
+        component: componentImport(valItem.name, parentDir)
+      }
+    } else {
+      valRouter = {
+        ...valItem,
+        component: componentImport(valItem.name, parentDir),
+        children: valItem.children.map(vItem => importRouteComp(vItem, valItem.name))
+      }
+    }
+    return valRouter;
   };
+  return importRouteComp(val);
 });
+
+console.log('routeListArr', routeListArr);
 
 const routes = [
   {
@@ -25,5 +41,6 @@ const routes = [
 
 export default createRouter({
   history: createWebHistory(),
+  // @ts-ignores
   routes: routes
 });

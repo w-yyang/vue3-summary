@@ -1,7 +1,15 @@
-interface IRouteList {
+interface IRouteChildren {
   title: string;
   path: string;
   name: string;
+  children?: IRouteChildren[];
+}
+
+export interface IRouteList {
+  title: string;
+  path: string;
+  name: string;
+  children?: IRouteChildren[];
 };
 
 export const routeList: IRouteList[] = [
@@ -109,5 +117,37 @@ export const routeList: IRouteList[] = [
     title: 'transition使用',
     name: 'Transition',
     path: '/use/transition'
+  },
+  {
+    title: 'request使用',
+    name: 'RequestInstance',
+    path: '/use/requestInstance'
+  },
+  {
+    title: '单文件上传',
+    name: 'UploadSingFile',
+    path: '/use/uploadSingleFile',
+  },
+  {
+    title: 'VueRouter使用',
+    name: 'VueRouter',
+    path: '/use/vuerouter',
+    children: [
+      {
+        title: 'VueRouterTest1',
+        name: 'VueRouterTest1',
+        path: 'test1',
+      },
+      {
+        title: 'VueRouterTest2',
+        name: 'VueRouterTest2',
+        path: 'test2',
+      },
+      {
+        title: 'VueRouterTest3',
+        name: 'VueRouterTest3',
+        path: 'test3',
+      },
+    ]
   }
 ];

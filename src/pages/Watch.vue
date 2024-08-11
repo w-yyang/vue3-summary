@@ -23,6 +23,7 @@ export default defineComponent({
     watch(
       () => state.count,
       (count, preCount) => {
+        debugger;
         console.log('reactive', count, preCount);
       },
       {
