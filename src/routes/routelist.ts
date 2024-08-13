@@ -149,5 +149,10 @@ export const routeList: IRouteList[] = [
         path: 'test3',
       },
     ]
+  },
+  {
+    title: 'Pinia使用',
+    name: 'Pinia',
+    path: '/use/pinia',
   }
 ];
