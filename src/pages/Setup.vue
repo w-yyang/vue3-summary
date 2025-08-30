@@ -1,5 +1,5 @@
 <template>
-
+  <div></div>
 </template>
 
 <script lang="ts">
@@ -13,6 +13,8 @@ export default defineComponent({
       emit,
       expose
     } = context;
+
+    console.log('props params', attrs, slots, emit, expose);
   }
 });
 </script>

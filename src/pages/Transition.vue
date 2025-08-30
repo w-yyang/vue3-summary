@@ -17,7 +17,7 @@ export default defineComponent({
   components: {
     Transition
   },
-  setup(props) {
+  setup() {
     const showElem = ref(false);
 
     return {

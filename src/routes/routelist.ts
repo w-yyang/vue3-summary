@@ -154,5 +154,25 @@ export const routeList: IRouteList[] = [
     title: 'Pinia使用',
     name: 'Pinia',
     path: '/use/pinia',
-  }
+  },
+  {
+    title: 'KeepAlive使用',
+    name: 'KeepAlive',
+    path: '/use/KeepAlive',
+  },
+  {
+    title: '获取DOM实例',
+    name: 'RefGetDom',
+    path: '/use/RefGetDom',
+  },
+  {
+    title: 'Mixin混入',
+    name: 'Mixin',
+    path: '/use/Mixin',
+  },
+  {
+    title: '自定义Hooks',
+    name: 'CustomHooksUse',
+    path: '/use/Hooks',
+  },
 ];

@@ -6,7 +6,7 @@
 import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
-  setup(props) {
+  setup() {
     const inpRef = ref('');
 
     watch(() => {

@@ -3,14 +3,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent } from 'vue';
 
 import { uploadSingleFile } from '../apis/index';
 
 export default defineComponent({
-  setup(props) {
-    const uploadVal = reactive({});
-
+  setup() {
     const fileSelectChange = (event) => {
       const file = event.target.files[0];
       console.log('eeee', file);

@@ -23,11 +23,10 @@ export default defineComponent({
     watch(
       () => state.count,
       (count, preCount) => {
-        debugger;
         console.log('reactive', count, preCount);
       },
       {
-        // immediate: true,
+        immediate: true,
         // deep: true,
         // flush: 'post',
         // onTrack() {}

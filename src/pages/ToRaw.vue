@@ -5,10 +5,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, setup } from 'vue';
+import { defineComponent, ref, shallowReactive, toRaw, reactive } from 'vue';
 
 export default defineComponent({
-  setup(props) {
+  setup() {
     const tempTest = { num: 0 };
     const test1 = ref(0);
     const test2 = reactive(tempTest);

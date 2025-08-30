@@ -47,6 +47,8 @@ export default defineComponent({
     min-width: 240px;
     border-right: 1.5px solid #ddd;
     height: calc(100vh - 80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     ul {
       width: 100%;

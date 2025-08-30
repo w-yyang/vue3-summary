@@ -5,10 +5,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, shallowRef } from 'vue';
 
 export default defineComponent({
-  setup(props) {
+  setup() {
     const test1 = shallowRef({ count: 0 })
     
     //该层赋值不会触发更改

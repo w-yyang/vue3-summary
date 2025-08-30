@@ -11,7 +11,7 @@ export default defineComponent({
   components: {
     Teleport
   },
-  setup(props) {
+  setup() {
     return {
 
     };

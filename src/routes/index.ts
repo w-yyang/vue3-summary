@@ -1,4 +1,3 @@
-import { defineAsyncComponent } from "vue";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 import Home from '../pages/Home.vue';
@@ -41,6 +40,6 @@ const routes = [
 
 export default createRouter({
   history: createWebHistory(),
-  // @ts-ignores
+  // @ts-expect-errors
   routes: routes
 });

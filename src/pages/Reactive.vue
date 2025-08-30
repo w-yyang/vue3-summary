@@ -9,7 +9,7 @@
 import { defineComponent, reactive } from 'vue';
 
 export default defineComponent({
-  setup(props) {
+  setup() {
     const testObj = reactive({
       a: 0,
       b: {

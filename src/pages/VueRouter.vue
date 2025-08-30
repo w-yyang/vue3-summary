@@ -29,7 +29,7 @@ export default defineComponent({
     RouterView,
     RouterLink
   },
-  setup(props) {
+  setup() {
     // 路由实例，可用来动态路由
     const routerInstance = useRouter();
     // 当前路由信息实例 可获取路由参数
@@ -74,7 +74,7 @@ export default defineComponent({
       });
     };
 
-    watch(routeInstance, (newVal, oldVal) => {
+    watch(routeInstance, (newVal) => {
       console.log('route changed', newVal.query, newVal.params);
     });
 
